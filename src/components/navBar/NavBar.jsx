@@ -5,7 +5,7 @@ import { Hamburger } from "./Hamburger";
 
 export const NavBar = () => {
   return (
-    <Wrapper>
+    <Wrapper id="inicio">
       <div className="container">
         <div className="nameContainer">
           <span className="santiagoName">Santiago Dev</span>
@@ -15,10 +15,18 @@ export const NavBar = () => {
           </span>
         </div>
         <div className="optionsContainer">
-          <span className="animatedLine">Inicio</span>
-          <span className="animatedLine">Acerca de mi</span>
-          <span className="animatedLine">Proyectos</span>
-          <span className="animatedLine">Contactame</span>
+          <a href="#inicio" className="animatedLine">
+            Inicio
+          </a>
+          <a href="#aboutMe" className="animatedLine">
+            Acerca de mi
+          </a>
+          <a href="#proyects" className="animatedLine">
+            Proyectos
+          </a>
+          <a href="#contactme" className="animatedLine">
+            Contactame
+          </a>
         </div>
       </div>
     </Wrapper>
@@ -103,6 +111,7 @@ const Wrapper = styled.div`
       background-position: bottom;
       transition: background-size 700ms ease-in-out;
       line-height: 30px;
+      color: white;
     }
     .animatedLine:hover {
       background-size: 100% 3px;

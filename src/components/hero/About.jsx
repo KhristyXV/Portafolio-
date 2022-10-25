@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Yo from "../../assets/images/yo.png";
+import YoBiggest from "../../assets/images/yoBiggest.png";
 import arrow from "../../assets/images/arrow.png";
 
 export const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="aboutMe">
       <div className="subContainer">
+        <div className="imageMobileContainer">
+          <img src={Yo} alt="imgMobileYo" />
+        </div>
         <div className="imageContainer">
-          <img src={Yo} alt="imageSantiago" />
+          <img src={YoBiggest} alt="imageSantiago" classname="YoBiggest" />
         </div>
         <div className="textContainer">
           <h1> Acerca de mi</h1>
@@ -52,9 +56,10 @@ const Wrapper = styled.div`
     background-color: #141516;
     width: 98%;
     border-radius: 10px;
+    height: 1000px;
   }
   .imageContainer {
-    margin-top: 15px;
+    display: none;
   }
   .textContainer {
     width: 90%;
@@ -77,7 +82,7 @@ const Wrapper = styled.div`
     letter-spacing: 0.44px;
   }
   .buttonContainer {
-    display: flex;
+    display: block;
     justify-content: left;
   }
 
@@ -112,5 +117,56 @@ const Wrapper = styled.div`
   }
   .arrowContainer {
     padding-left: 5px;
+  }
+  .YoBiggest {
+    display: none;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-top: 60px;
+    .subContainer {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #141516;
+      width: 70%;
+      min-width: 1206.1px;
+      height: auto;
+    }
+    .imageMobileContainer {
+      display: none;
+    }
+    .imageContainer {
+      display: block;
+      margin-left: 15px;
+      margin-right: 40px;
+      margin-top: 20px;
+    }
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 555px;
+    }
+    .textContainer h1 {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+    .textContainer h3 {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      width: 90%;
+
+      /* or 175% */
+      letter-spacing: 0.44px;
+    }
   }
 `;
