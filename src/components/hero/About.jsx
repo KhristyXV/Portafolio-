@@ -12,7 +12,7 @@ export const About = () => {
           <img src={Yo} alt="imgMobileYo" />
         </div>
         <div className="imageContainer">
-          <img src={YoBiggest} alt="imageSantiago" classname="YoBiggest" />
+          <img src={YoBiggest} alt="imageSantiago" />
         </div>
         <div className="textContainer">
           <h1> Acerca de mi</h1>

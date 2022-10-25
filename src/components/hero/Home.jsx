@@ -155,6 +155,7 @@ const HomeContainer = styled.div`
 
   @media screen and (min-width: 1024px) {
     height: 800px;
+
     .nameContainer {
       font-family: "DM Sans";
       font-style: normal;
@@ -163,7 +164,7 @@ const HomeContainer = styled.div`
       line-height: 90px;
       text-align: center;
       letter-spacing: -0.5px;
-      margin-bottom: 200px;
+      margin-bottom: 130px;
     }
     .nameMobile {
       display: none;
@@ -217,6 +218,7 @@ const HomeContainer = styled.div`
       display: flex;
       width: 60%;
       justify-content: space-around;
+      margin-bottom: 100px;
     }
     .socialImages {
       cursor: pointer;
