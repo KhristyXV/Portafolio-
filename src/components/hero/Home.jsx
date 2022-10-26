@@ -8,7 +8,7 @@ import curriculum from "../../assets/downloads/curriculumSchroh.pdf";
 
 export const Home = () => {
   return (
-    <HomeContainer>
+    <HomeContainer id="inicio">
       <div className="nameContainer">
         <span className="soy">Soy</span> {""}
         <div className="nameMobile">
@@ -68,7 +68,7 @@ const HomeContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 473px;
-
+  margin-top: 20px;
   .nameContainer {
     display: flex;
     flex-direction: column;
@@ -155,7 +155,7 @@ const HomeContainer = styled.div`
 
   @media screen and (min-width: 1024px) {
     height: 800px;
-
+    margin-top: 80px;
     .nameContainer {
       font-family: "DM Sans";
       font-style: normal;

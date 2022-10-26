@@ -6,7 +6,7 @@ import arrow from "../../assets/images/arrow.png";
 
 export const About = () => {
   return (
-    <Wrapper id="aboutMe">
+    <Wrapper>
       <div className="subContainer">
         <div className="imageMobileContainer">
           <img src={Yo} alt="imgMobileYo" />
@@ -14,7 +14,7 @@ export const About = () => {
         <div className="imageContainer">
           <img src={YoBiggest} alt="imageSantiago" />
         </div>
-        <div className="textContainer">
+        <div className="textContainer" id="aboutMe">
           <h1> Acerca de mi</h1>
           <h3>
             Hola! Mi nombre es Miguel y tengo gran afinidad hacía el trabajo
@@ -84,6 +84,7 @@ const Wrapper = styled.div`
   .buttonContainer {
     display: block;
     justify-content: left;
+    margin-bottom: 12px;
   }
 
   button {

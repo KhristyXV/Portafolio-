@@ -12,10 +12,10 @@ export const Hamburger = () => {
         <span></span>
 
         <ul id="menu">
-          <a href="#">
+          <a href="#inicio">
             <li>Inicio</li>
           </a>
-          <a href="#">
+          <a href="#aboutMe">
             <li>Acerca de mi</li>
           </a>
           <a href="#">
@@ -126,7 +126,7 @@ const Nav = styled.nav`
     margin: -100px 0 0 -320px;
     padding: 50px;
     padding-top: 125px;
-    background: #0f0f0f;
+    background: #0f0f0fef;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */

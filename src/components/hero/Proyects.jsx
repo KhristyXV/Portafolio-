@@ -7,13 +7,15 @@ import city from "../../assets/videos/appClima.mp4";
 
 export const Proyects = () => {
   return (
-    <Wrapper>
+    <Wrapper id="proyects">
       <div className="titleAndButton">
         <div className="moveTitleAndButton">
           <h1>Proyectos</h1>
           <button className="buttonDesktop">
             <span className="center">
-              Ver más en GitHub
+              <a href="https://github.com/KhristyXV?tab=repositories">
+                Ver más en GitHub
+              </a>
               <img
                 src={blackArrow}
                 alt="arrowBlack"
@@ -23,34 +25,44 @@ export const Proyects = () => {
           </button>
         </div>
       </div>
-      <div className="boxOne">
-        <video
-          className="resolutionImage"
-          id="player"
-          playsinline
-          controls
-          data-poster="/path/to/poster.jpg"
-        >
-          <source src={digitize} type="video/mp4" />
-        </video>
-      </div>
-      <div className="boxTwo">
-        <video
-          className="resolutionImage"
-          id="player"
-          playsinline
-          controls
-          data-poster="/path/to/poster.jpg"
-        >
-          <source src={city} type="video/mp4" />
-        </video>
-      </div>
-      <div className="boxThree">
-        <img src={digitizeMobile} className="resolutionImage" />
+      <div className="videoContainer">
+        <div className="containerBoxOne">
+          <div className="boxOne">
+            <video
+              className="resolutionImage"
+              id="player"
+              playsinline
+              controls
+              data-poster="/path/to/poster.jpg"
+            >
+              <source src={digitize} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div className="containerBoxTwo">
+          <div className="boxTwo">
+            <video
+              className="resolutionImage"
+              id="player"
+              playsinline
+              controls
+              data-poster="/path/to/poster.jpg"
+            >
+              <source src={city} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div className="containerBoxThree">
+          <div className="boxThree">
+            <img src={digitizeMobile} className="resolutionImage" />
+          </div>
+        </div>
       </div>
       <button className="buttonMobile">
         <span className="center">
-          Ver más en GitHub
+          <a href="https://github.com/KhristyXV?tab=repositories">
+            Ver más en GitHub
+          </a>
           <img src={blackArrow} alt="arrowBlack" className="arrowBlacksin" />
         </span>
       </button>
@@ -65,7 +77,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   text-align: center;
   margin-top: 70px;
-
+  a {
+    text-decoration: none;
+    color: #171718;
+  }
   h1 {
     font-family: "DM Sans";
     font-style: normal;
@@ -127,6 +142,13 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
   }
+  .videoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 550px;
+  }
+
   @media screen and (min-width: 1024px) {
     margin-top: 210px;
     .buttonMobile {
@@ -171,6 +193,29 @@ const Wrapper = styled.div`
       height: 350px;
       border: 1px solid #00ffe0;
       box-shadow: -12px 12px 8px 4px rgba(0, 255, 224, 0.6);
+    }
+    .videoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 1200px;
+      width: 69%;
+      margin-top: 60px;
+    }
+    .containerBoxOne {
+      display: flex;
+      width: 100%;
+      justify-content: left;
+    }
+    .containerBoxTwo {
+      display: flex;
+      width: 100%;
+      justify-content: right;
+    }
+    .containerBoxThree {
+      display: flex;
+      width: 100%;
+      justify-content: left;
     }
   }
 `;

@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import hamburger from "../../assets/images/hamburger.png";
 import { Hamburger } from "./Hamburger";
 
 export const NavBar = () => {
   return (
-    <Wrapper id="inicio">
+    <Wrapper>
       <div className="container">
         <div className="nameContainer">
           <span className="santiagoName">Santiago Dev</span>
@@ -39,10 +38,11 @@ const Wrapper = styled.div`
   height: 54px;
   align-items: center;
   justify-content: center;
-
+  position: fixed;
+  top: 0;
+  background-color: #0f0f0fdf;
   .container {
     display: flex;
-
     width: 95%;
   }
   .nameContainer {
