@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import blackArrow from "../../assets/images/blackArrow.png";
 import digitize from "../../assets/videos/digitize.mp4";
-import digitizeMobile from "../../assets/images/digitizeMobile.jpg";
+import ecoSport from "../../assets/videos/ecoSport.mp4";
 import city from "../../assets/videos/appClima.mp4";
 
 export const Proyects = () => {
@@ -54,7 +54,15 @@ export const Proyects = () => {
         </div>
         <div className="containerBoxThree">
           <div className="boxThree">
-            <img src={digitizeMobile} className="resolutionImage" />
+            <video
+              className="resolutionImage"
+              id="player"
+              playsinline
+              controls
+              data-poster="/path/to/poster.jpg"
+            >
+              <source src={ecoSport} type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Yo from "../../assets/images/yo.png";
 import YoBiggest from "../../assets/images/yoBiggest.png";
 import arrow from "../../assets/images/arrow.png";
+import { Modal } from "../Modal.jsx/Modal";
+import { Modals } from "../Modal.jsx/Modals";
 
 export const About = () => {
   return (
@@ -30,10 +32,7 @@ export const About = () => {
           </h3>
 
           <div className="buttonContainer">
-            <button className="hola">
-              Mas acerca de mi{" "}
-              <img src={arrow} alt="flechita" className="arrowContainer" />
-            </button>
+            <Modals />
           </div>
         </div>
       </div>
