@@ -33,8 +33,7 @@ export const Form = (props) => {
   let regexName =
     /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
 
-  let regexTextArea =
-    /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+  let regexTextArea = /[A-Za-z0-9-\s+@+.+-]/;
 
   const {
     value: enteredName,
