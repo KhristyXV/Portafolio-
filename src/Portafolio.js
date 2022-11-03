@@ -1,6 +1,6 @@
 import React from "react";
 import { About } from "./components/hero/About";
-import { Form } from "./components/hero/Form";
+import { Form } from "./components/hero/Form/Form.jsx";
 import { Home } from "./components/hero/Home";
 import { Proyects } from "./components/hero/Proyects";
 import { NavBar } from "./components/navBar/NavBar";

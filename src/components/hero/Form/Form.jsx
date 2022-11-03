@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import emailjs from "emailjs-com";
+import { useInput } from "../../../hooks/useInput";
 
 export const Form = (props) => {
   const formu = useRef();
@@ -18,85 +19,79 @@ export const Form = (props) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("enviado correctamente");
         },
         (error) => {
-          console.log(error.text);
+          alert("no ha sido enviado");
         }
       );
-    setEnteredName("");
-    setEnteredNameTouch(false);
-
-    setEnteredEmail("");
-    setEnteredEmailTouch(false);
   };
-
-  const [enteredName, setEnteredName] = useState("");
-  const [enteredNameTouch, setEnteredNameTouch] = useState(false);
-
-  const [enteredEmail, setEnteredEmail] = useState("");
-  const [enteredEmailTouch, setEnteredEmailTouch] = useState(false);
-
-  let regexName = /^([a-zA-Z ]){2,30}$/;
-
-  const enteredNameIsValid = regexName.test(enteredName.trim());
-  const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouch;
 
   let regexEmail =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-  const enteredEmailIsValid = regexEmail.test(enteredEmail.trim());
-  const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouch;
+  let regexName =
+    /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+
+  let regexTextArea =
+    /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+
+  const {
+    value: enteredName,
+    isValid: enteredNameIsValid,
+    hasError: nameInputHasError,
+    valueChangeHandler: nameChangedHandler,
+    inputBlurHandler: nameBlurHandler,
+    reset: resetNameInput,
+  } = useInput((value) => regexName.test(value.trim()));
+
+  const {
+    value: enteredEmail,
+    isValid: enteredEmailIsValid,
+    hasError: emailInputHasError,
+    valueChangeHandler: emailChangedHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: resetEmailInput,
+  } = useInput((value) => regexEmail.test(value.trim()));
+
+  const {
+    value: enteredTextArea,
+    isValid: enteredTextAreaIsValid,
+    hasError: textAreaInputHasError,
+    valueChangeHandler: textAreaChangedHandler,
+    inputBlurHandler: textAreaBlurHandler,
+    reset: resetTextArea,
+  } = useInput((value) => regexTextArea.test(value.trim()));
 
   let formIsValid = false;
 
-  if (enteredNameIsValid && enteredEmailIsValid) {
+  if (enteredNameIsValid && enteredEmailIsValid && enteredTextAreaIsValid) {
     formIsValid = true;
   }
 
-  const nameInputChangeHandler = (event) => {
-    setEnteredName(
-      event.target.value
-    ); /*Controlador de pulsacion del usuario, toma el valor de cada tecla que toca*/
-  };
-
-  const emailInputChangeHandler = (event) => {
-    setEnteredEmail(
-      event.target.value
-    ); /*Controlador de pulsacion del usuario, toma el valor de cada tecla que toca*/
-  };
-
-  const nameInputBlurHandler = (event) => {
-    setEnteredNameTouch(true);
-  };
-
-  const emailInputBlurHandler = (event) => {
-    setEnteredEmailTouch(true);
-  };
-
   const formSubmissionHandler = (event) => {
     event.preventDefault(); /*Cuando creamos el form integramos el button, por las solicitudes http debemos integrar el ePreventDefault para no recargar la pagina*/
-
-    setEnteredNameTouch(true);
 
     if (!enteredNameIsValid) {
       return;
     }
 
-    console.log(enteredName);
+    resetNameInput();
 
-    setEnteredName("");
-    setEnteredNameTouch(false);
+    resetEmailInput();
 
-    setEnteredEmail("");
-    setEnteredEmailTouch(false);
+    resetTextArea();
   };
 
-  const nameInputClasses = nameInputIsInvalid
+  const nameInputClasses = nameInputHasError
     ? "inputCont invalid"
     : "inputCont";
 
-  const emailInputClasses = emailInputIsInvalid
+  const emailInputClasses = emailInputHasError
+    ? "inputCont invalid"
+    : "inputCont";
+
+  const textAreaInputClasses = textAreaInputHasError
     ? "inputCont invalid"
     : "inputCont";
 
@@ -108,7 +103,7 @@ export const Form = (props) => {
           Si estás interesado en mi trabajo o tienes alguna inquietud, no dudes
           en escribirme!
         </h4>
-        <div>
+        <div className="formBiggestContainer">
           <form
             ref={formu}
             className="formContainer"
@@ -119,14 +114,14 @@ export const Form = (props) => {
                 Tu nombre
                 <input
                   placeholder="Nombre completo"
-                  onChange={nameInputChangeHandler}
-                  onBlur={nameInputBlurHandler}
+                  onChange={nameChangedHandler}
+                  onBlur={nameBlurHandler}
                   value={enteredName}
                   type="text"
                   id="name"
                   name="name"
                 />
-                {nameInputIsInvalid && (
+                {nameInputHasError && (
                   <p className="error-text">No se introdujo un nombre</p>
                 )}
               </label>
@@ -136,18 +131,18 @@ export const Form = (props) => {
                 Tu E-mail
                 <input
                   placeholder="Ejemplo@hotmail.com"
-                  onChange={emailInputChangeHandler}
-                  onBlur={emailInputBlurHandler}
+                  onChange={emailChangedHandler}
+                  onBlur={emailBlurHandler}
                   value={enteredEmail}
                   type="email"
                   id="email"
                 />
-                {emailInputIsInvalid && (
+                {emailInputHasError && (
                   <p className="error-text">No se introdujo un Email</p>
                 )}
               </label>
             </div>
-            <div className="inputCont">
+            <div className={textAreaInputClasses}>
               <label>
                 Tu Mensaje
                 <textarea
@@ -155,7 +150,13 @@ export const Form = (props) => {
                   className="yourMensajeInput"
                   id="message"
                   name="message"
+                  onChange={textAreaChangedHandler}
+                  onBlur={textAreaBlurHandler}
+                  value={enteredTextArea}
                 />
+                {textAreaInputHasError && (
+                  <p className="error-text">No se introdujo texto</p>
+                )}
               </label>
             </div>
             <div className="buttonContainer">
@@ -315,5 +316,33 @@ const Wrapper = styled.div`
     border: 0.5px solid #ffffff;
     cursor: not-allowed;
     transition: 700ms all;
+  }
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 71px;
+    }
+    h4 {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .formBiggestContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 170px;
+      margin-top: 50px;
+    }
+    .formContainer {
+      background: #26292d;
+      border-radius: 8px;
+      width: 647px;
+      height: 600px;
+    }
   }
 `;
