@@ -155,7 +155,7 @@ const HomeContainer = styled.div`
 
   @media screen and (min-width: 1024px) {
     height: 800px;
-    margin-top: 80px;
+    margin-top: 140px;
     .nameContainer {
       font-family: "DM Sans";
       font-style: normal;

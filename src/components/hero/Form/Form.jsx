@@ -19,7 +19,7 @@ export const Form = (props) => {
       )
       .then(
         (result) => {
-          alert("enviado correctamente");
+          alert("Su mensaje ha sido enviado correctamente :)");
         },
         (error) => {
           alert("no ha sido enviado");
@@ -108,60 +108,63 @@ export const Form = (props) => {
             className="formContainer"
             onSubmit={formSubmissionHandler && sendEmail}
           >
-            <div className={nameInputClasses}>
-              <label>
-                Tu nombre
-                <input
-                  placeholder="Nombre completo"
-                  onChange={nameChangedHandler}
-                  onBlur={nameBlurHandler}
-                  value={enteredName}
-                  type="text"
-                  id="name"
-                  name="name"
-                />
-                {nameInputHasError && (
-                  <p className="error-text">No se introdujo un nombre</p>
-                )}
-              </label>
-            </div>
-            <div className={emailInputClasses}>
-              <label>
-                Tu E-mail
-                <input
-                  placeholder="Ejemplo@hotmail.com"
-                  onChange={emailChangedHandler}
-                  onBlur={emailBlurHandler}
-                  value={enteredEmail}
-                  type="email"
-                  id="email"
-                />
-                {emailInputHasError && (
-                  <p className="error-text">No se introdujo un Email</p>
-                )}
-              </label>
-            </div>
-            <div className={textAreaInputClasses}>
-              <label>
-                Tu Mensaje
-                <textarea
-                  placeholder="Hola!..."
-                  className="yourMensajeInput"
-                  id="message"
-                  name="message"
-                  onChange={textAreaChangedHandler}
-                  onBlur={textAreaBlurHandler}
-                  value={enteredTextArea}
-                />
-                {textAreaInputHasError && (
-                  <p className="error-text">No se introdujo texto</p>
-                )}
-              </label>
-            </div>
-            <div className="buttonContainer">
-              <button disabled={!formIsValid} className="formButton">
-                Enviar
-              </button>
+            <div className="positionContainer">
+              <div className={nameInputClasses}>
+                <label>
+                  Tu nombre
+                  <input
+                    placeholder="Nombre completo"
+                    onChange={nameChangedHandler}
+                    onBlur={nameBlurHandler}
+                    value={enteredName}
+                    type="text"
+                    id="name"
+                    name="name"
+                  />
+                  {nameInputHasError && (
+                    <div className="error-text">No se introdujo un nombre</div>
+                  )}
+                </label>
+              </div>
+              <div className={emailInputClasses}>
+                <label>
+                  Tu E-mail
+                  <input
+                    placeholder="Ejemplo@hotmail.com"
+                    onChange={emailChangedHandler}
+                    onBlur={emailBlurHandler}
+                    value={enteredEmail}
+                    type="email"
+                    id="email"
+                    name="email"
+                  />
+                  {emailInputHasError && (
+                    <div className="error-text">No se introdujo un Email</div>
+                  )}
+                </label>
+              </div>
+              <div className={textAreaInputClasses}>
+                <label>
+                  Tu Mensaje
+                  <textarea
+                    placeholder="Hola!..."
+                    className="yourMensajeInput"
+                    id="message"
+                    name="message"
+                    onChange={textAreaChangedHandler}
+                    onBlur={textAreaBlurHandler}
+                    value={enteredTextArea}
+                  />
+                  {textAreaInputHasError && (
+                    <div className="error-text">No se introdujo texto</div>
+                  )}
+                </label>
+              </div>
+              <div className="buttonContainer">
+                <button disabled={!formIsValid} className="formButton">
+                  Enviar
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -213,7 +216,7 @@ const Wrapper = styled.div`
     color: white;
 
     width: 82%;
-    height: 10Spx;
+    height: 25px;
     background-color: #1c1e22;
     border: 1px solid #a0a0a1;
     border-radius: 8px;
@@ -317,6 +320,15 @@ const Wrapper = styled.div`
     transition: 700ms all;
   }
   @media screen and (min-width: 1024px) {
+    input {
+      width: 92%;
+    }
+    label {
+      width: 100%;
+    }
+    textarea {
+      width: 92%;
+    }
     h1 {
       font-family: "DM Sans";
       font-style: normal;
@@ -338,10 +350,25 @@ const Wrapper = styled.div`
       margin-top: 50px;
     }
     .formContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       background: #26292d;
       border-radius: 8px;
-      width: 647px;
-      height: 600px;
+      width: 620px;
+    }
+    .formButton {
+      width: 100%;
+      height: 50px;
+    }
+    .positionContainer {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+    .buttonContainer {
+      margin-top: 7px;
+      margin-bottom: 15px;
     }
   }
 `;
