@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import React from "react";
 import styled from "styled-components";
 import { Hamburger } from "./Hamburger";
@@ -14,18 +15,46 @@ export const NavBar = () => {
           </span>
         </div>
         <div className="optionsContainer">
-          <a href="#inicio" className="animatedLine">
-            Inicio
-          </a>
-          <a href="#aboutMe" className="animatedLine">
-            Acerca de mi
-          </a>
-          <a href="#proyects" className="animatedLine">
-            Proyectos
-          </a>
-          <a href="#contactme" className="animatedLine">
-            Contactame
-          </a>
+          <Link
+            to={"inicio"}
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={400}
+            className="animatedLine"
+          >
+            <a>Inicio</a>
+          </Link>
+          <Link
+            to={"aboutMe"}
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={400}
+            className="animatedLine"
+          >
+            <a>Acerca de mi</a>
+          </Link>
+          <Link
+            to={"proyects"}
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={400}
+            className="animatedLine"
+          >
+            <a>Proyectos</a>
+          </Link>
+          <Link
+            to={"contactme"}
+            spy={true}
+            smooth={true}
+            offset={-110}
+            duration={400}
+            className="animatedLine"
+          >
+            <a>Contactame</a>
+          </Link>
         </div>
       </div>
     </Wrapper>
@@ -41,6 +70,9 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   background-color: #0f0f0fdf;
+  a {
+    color: white;
+  }
   .container {
     display: flex;
     width: 95%;
