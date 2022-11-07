@@ -26,6 +26,7 @@ export const Home = () => {
           ¡Bienvenido a mi Portafolio web!{" "}
         </div>
         <div className="buttonsContainer">
+          <></>
           <button className="buttonSeeProyects">Ver proyectos</button>
           <a href={curriculum} download="CV Santiago Schroh">
             <button className="buttonDownloadCV">
@@ -54,7 +55,7 @@ export const Home = () => {
           href="https://www.linkedin.com/in/santiago-schroh-350099221/"
           className="socialImages"
         >
-          <img src={linkedin} alt="imageLinkedin" />
+          <img src={linkedin} alt="imageLinkedin" className="linkedinImage" />
         </a>
       </div>
     </HomeContainer>
@@ -182,6 +183,9 @@ const HomeContainer = styled.div`
       width: 15ch;
       animation: typing 3s steps(18), blink 0.5s infinite step-end alternate;
       overflow: hidden;
+    }
+    .linkedinImage {
+      margin-top: 6px;
     }
     @keyframes typing {
       from {

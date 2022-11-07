@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export const Hamburger = () => {
   return (
@@ -12,18 +13,50 @@ export const Hamburger = () => {
         <span></span>
 
         <ul id="menu">
-          <a href="#inicio">
-            <li>Inicio</li>
-          </a>
-          <a href="#aboutMe">
-            <li>Acerca de mi</li>
-          </a>
-          <a href="#">
-            <li>Proyectos</li>
-          </a>
-          <a href="#">
-            <li>Contactame</li>
-          </a>
+          <Link
+            to={"inicio"}
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={400}
+          >
+            <a>
+              <li>Inicio</li>
+            </a>
+          </Link>
+          <Link
+            to={"aboutMe"}
+            spy={true}
+            smooth={true}
+            offset={-430}
+            duration={400}
+          >
+            <a>
+              <li>Acerca de mi</li>
+            </a>
+          </Link>
+          <Link
+            to={"proyects"}
+            spy={true}
+            smooth={true}
+            offset={-60}
+            duration={400}
+          >
+            <a>
+              <li>Proyectos</li>
+            </a>
+          </Link>
+          <Link
+            to={"contactme"}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={400}
+          >
+            <a href="#">
+              <li>Contactame</li>
+            </a>
+          </Link>
         </ul>
       </div>
     </Nav>
@@ -41,7 +74,7 @@ const Nav = styled.nav`
   #menuToggle a {
     text-decoration: none;
     color: #ffffff;
-
+    cursor: pointer;
     transition: color 0.3s ease;
   }
 
