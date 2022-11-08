@@ -18,7 +18,7 @@ export const Hamburger = () => {
             spy={true}
             smooth={true}
             offset={-200}
-            duration={400}
+            duration={300}
           >
             <a>
               <li>Inicio</li>
@@ -29,7 +29,7 @@ export const Hamburger = () => {
             spy={true}
             smooth={true}
             offset={-430}
-            duration={400}
+            duration={300}
           >
             <a>
               <li>Acerca de mi</li>
@@ -40,7 +40,7 @@ export const Hamburger = () => {
             spy={true}
             smooth={true}
             offset={-60}
-            duration={400}
+            duration={300}
           >
             <a>
               <li>Proyectos</li>
@@ -51,7 +51,7 @@ export const Hamburger = () => {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={400}
+            duration={300}
           >
             <a href="#">
               <li>Contactame</li>

@@ -37,7 +37,7 @@ export const Form = (props) => {
 
   const {
     value: enteredName,
-    isValid: enteredNameIsValid,
+    valueIsValid: nameValueIsValid,
     hasError: nameInputHasError,
     valueChangeHandler: nameChangedHandler,
     inputBlurHandler: nameBlurHandler,
@@ -46,7 +46,7 @@ export const Form = (props) => {
 
   const {
     value: enteredEmail,
-    isValid: enteredEmailIsValid,
+    valueIsValid: emailValueIsValid,
     hasError: emailInputHasError,
     valueChangeHandler: emailChangedHandler,
     inputBlurHandler: emailBlurHandler,
@@ -55,7 +55,7 @@ export const Form = (props) => {
 
   const {
     value: enteredTextArea,
-    isValid: enteredTextAreaIsValid,
+    valueIsValid: textAreaValueIsValid,
     hasError: textAreaInputHasError,
     valueChangeHandler: textAreaChangedHandler,
     inputBlurHandler: textAreaBlurHandler,
@@ -64,14 +64,14 @@ export const Form = (props) => {
 
   let formIsValid = false;
 
-  if (enteredNameIsValid && enteredEmailIsValid && enteredTextAreaIsValid) {
+  if (nameValueIsValid && emailValueIsValid && textAreaValueIsValid) {
     formIsValid = true;
   }
 
   const formSubmissionHandler = (event) => {
     event.preventDefault(); /*Cuando creamos el form integramos el button, por las solicitudes http debemos integrar el ePreventDefault para no recargar la pagina*/
 
-    if (!enteredNameIsValid) {
+    if (!nameValueIsValid) {
       return;
     }
 

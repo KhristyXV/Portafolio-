@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import blackArrow from "../../assets/images/blackArrow.png";
-import digitize from "../../assets/videos/digitize.mp4";
-import ecoSport from "../../assets/videos/ecoSport.mp4";
-import city from "../../assets/videos/appClima.mp4";
+import blackArrow from "../../../assets/images/blackArrow.png";
+import digitize from "../../../assets/videos/digitize.mp4";
+import ecoSport from "../../../assets/videos/ecoSport.mp4";
+import city from "../../../assets/videos/appClima.mp4";
+import {
+  InterrogationModalRight,
+  InterrogationModalRightTwo,
+  InterrogationModalLeft,
+} from "./InterrogationModalRight";
 
 export const Proyects = () => {
   return (
@@ -38,8 +43,15 @@ export const Proyects = () => {
               <source src={digitize} type="video/mp4" />
             </video>
           </div>
+
+          <div className="containerInterrogationOne">
+            <InterrogationModalRight />
+          </div>
         </div>
         <div className="containerBoxTwo">
+          <div className="containerInterrogationTwo">
+            <InterrogationModalLeft />
+          </div>
           <div className="boxTwo">
             <video
               className="resolutionImage"
@@ -63,6 +75,9 @@ export const Proyects = () => {
             >
               <source src={ecoSport} type="video/mp4" />
             </video>
+          </div>
+          <div className="containerInterrogationOne">
+            <InterrogationModalRightTwo />
           </div>
         </div>
       </div>
@@ -110,9 +125,10 @@ const Wrapper = styled.div`
     font-size: 16px;
     line-height: 16px;
   }
-  div {
+  video {
     cursor: pointer;
   }
+
   .buttonDesktop {
     display: none;
   }
@@ -122,6 +138,12 @@ const Wrapper = styled.div`
     border: 1px solid #00ffe0;
     background: url();
     box-shadow: -6px -6px 4px 2px rgba(0, 255, 224, 0.6);
+  }
+  .containerInterrogationOne {
+    display: none;
+  }
+  .containerInterrogationTwo {
+    display: none;
   }
   #fondo {
     background: url("../../assets/images/digitize.png");
@@ -184,17 +206,37 @@ const Wrapper = styled.div`
       line-height: 32px;
       letter-spacing: 1.25px;
     }
+    .containerBoxOne {
+      display: flex;
+    }
     .boxOne {
       width: 600px;
       height: 350px;
       border: 1px solid #00ffe0;
       box-shadow: -12px -12px 8px 4px rgba(0, 255, 224, 0.6);
     }
+    .containerInterrogationOne {
+      display: flex;
+      height: 60px;
+      margin-left: 59px;
+
+      cursor: pointer;
+    }
+
     .boxTwo {
       width: 600px;
       height: 350px;
       border: 1px solid #00ffe0;
       box-shadow: 12px 12px 8px 4px rgba(0, 255, 224, 0.6);
+    }
+    .containerInterrogationTwo {
+      display: flex;
+      justify-content: right;
+      height: 60px;
+      width: 600px;
+      margin-right: 118px;
+      transition: 200ms;
+      cursor: pointer;
     }
     .boxThree {
       width: 600px;
