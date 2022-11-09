@@ -190,6 +190,7 @@ const Wrapper = styled.div`
     .titleAndButton {
       display: flex;
       width: 60%;
+      margin-bottom: 60px;
     }
     .moveTitleAndButton {
       justify-content: left;
@@ -208,6 +209,7 @@ const Wrapper = styled.div`
     }
     .containerBoxOne {
       display: flex;
+      margin-bottom: 100px;
     }
     .boxOne {
       width: 600px;
@@ -224,6 +226,7 @@ const Wrapper = styled.div`
     }
 
     .boxTwo {
+      margin-bottom: 100px;
       width: 600px;
       height: 350px;
       border: 1px solid #00ffe0;

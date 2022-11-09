@@ -3,8 +3,19 @@ import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { useInput } from "../../../hooks/useInput";
+import swal from "sweetalert";
 
 export const Form = (props) => {
+  const seeAlert = () => {
+    swal({
+      title: "Tu mensaje fue enviado con exito",
+      text: "En breve estaremos en contacto,  ¡ Gracias y que tengas linda jornada !. ",
+      icon: "success",
+      timer: "3000",
+      buttons: ["Aceptar"],
+    });
+  };
+
   const formu = useRef();
 
   const sendEmail = (e) => {
@@ -19,7 +30,7 @@ export const Form = (props) => {
       )
       .then(
         (result) => {
-          alert("Su mensaje ha sido enviado correctamente :)");
+          seeAlert();
         },
         (error) => {
           alert("no ha sido enviado");
@@ -177,6 +188,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+
   h1 {
     font-family: "DM Sans";
     font-style: normal;
@@ -320,6 +332,7 @@ const Wrapper = styled.div`
     transition: 700ms all;
   }
   @media screen and (min-width: 1024px) {
+    margin-top: 150px;
     input {
       width: 92%;
     }

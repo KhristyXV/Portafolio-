@@ -17,7 +17,7 @@ export const About = () => {
         <div className="textContainer" id="aboutMe">
           <h1> Acerca de mi</h1>
           <h3>
-            Hola! Mi nombre es Miguel y tengo gran afinidad hacía el trabajo
+            Hola! Mi nombre es Santiago y tengo gran afinidad hacía el trabajo
             colaborativo, me gusta crear diseños que inspiren e involucren a las
             personas. Como diseñador UI, considero que un buen producto no solo
             brinda una solución sino que permite crear una experiencia emocional

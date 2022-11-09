@@ -21,7 +21,10 @@ export const Footer = () => {
             <div className="contact">
               <h2>Contactame</h2>
               <h3>Correo</h3>
-              <a href="https://www.linkedin.com/in/santiago-schroh-350099221/">
+              <a
+                href="https://www.linkedin.com/in/santiago-schroh-350099221/"
+                target="_blank"
+              >
                 <h3>Linkedin</h3>
               </a>
             </div>
@@ -31,13 +34,19 @@ export const Footer = () => {
                 <h2>Social</h2>
               </div>
               <div className="containerIcon">
-                <a href="https://www.instagram.com/schrohsanti/">
+                <a
+                  href="https://www.instagram.com/schrohsanti/"
+                  target="_blank"
+                >
                   <img src={instagramSocial} alt="miniImageInstagram" />
                 </a>
-                <a href="https://www.linkedin.com/in/santiago-schroh-350099221/">
+                <a
+                  href="https://www.linkedin.com/in/santiago-schroh-350099221/"
+                  target="_blank"
+                >
                   <img src={linkedinSocial} alt="miniImageLinkedin" />
                 </a>
-                <a href="https://wa.me/c/5492915131087">
+                <a href="https://wa.me/c/5492915131087" target="_blank">
                   <img src={whatsappSocial} alt="miniImageWhatsApp" />
                 </a>
               </div>

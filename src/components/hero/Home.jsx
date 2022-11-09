@@ -42,18 +42,21 @@ export const Home = () => {
         <a
           href="https://github.com/KhristyXV?tab=repositories"
           className="socialImages"
+          target="_blank"
         >
           <img src={github} alt="imageGithub" />
         </a>
         <a
           href="https://www.instagram.com/schrohsanti/"
           className="socialImages"
+          target="_blank"
         >
           <img src={instagram} alt="imageInstagram" />
         </a>
         <a
           href="https://www.linkedin.com/in/santiago-schroh-350099221/"
           className="socialImages"
+          target="_blank"
         >
           <img src={linkedin} alt="imageLinkedin" className="linkedinImage" />
         </a>

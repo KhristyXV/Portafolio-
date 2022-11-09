@@ -33,11 +33,15 @@ const Wrapper = styled.div`
     position: absolute;
     width: 600px;
     height: 350px;
-    background-color: #000000;
+    background-color: #141516;
   }
   .modal-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0;
+    right: 2rem;
+    width: 33px;
+    height: 33px;
+    border-radius: 11px;
+    color: #020202;
   }
 `;
