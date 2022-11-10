@@ -36,7 +36,9 @@ export const Home = () => {
                 offset={-150}
                 duration={300}
               >
-                <button className="buttonSeeProyects">Ver proyectos</button>
+                <button className="buttonSeeProyects">
+                  <span>Ver proyectos</span>
+                </button>
               </Link>
             </div>
             <div>
@@ -134,7 +136,7 @@ const HomeContainer = styled.div`
     padding: 16px 20px;
     background: #00eee0;
     border-radius: 5px;
-    border-color: transparent;
+    border-color: #00eee0;
     cursor: pointer;
     width: 100%;
     height: 55px;
@@ -248,7 +250,65 @@ const HomeContainer = styled.div`
       padding: 20px 40px;
       display: flex;
       height: 63px;
+      width: 218.567px;
+      position: relative;
+      background: black;
+      border: 1px solid #00eee0;
     }
+    .buttonSeeProyects span {
+      display: none;
+    }
+    .buttonSeeProyects:before {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      content: "Espero que te gusten :)";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #0c0c0c;
+      background: #00eee0;
+      top: 0;
+      left: 100%;
+      transition: all 1s;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transform: scale(0) rotatey(0);
+      opacity: 0;
+    }
+    .buttonSeeProyects:hover:before {
+      transform: scale(1) rotatey(360deg);
+      left: 0;
+      opacity: 1;
+    }
+    .buttonSeeProyects:after {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      content: "Ver Proyectos";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #0c0c0c;
+      background: #00eee0;
+      top: 0;
+      left: 0;
+      transition: all 1s;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transform: scale(1) rotatey(0);
+      opacity: 1;
+    }
+    .buttonSeeProyects:hover:after {
+      transform: scale(0) rotatey(360deg);
+      left: -100%;
+      opacity: 0;
+    }
+
     .buttonDownloadCV {
       font-size: 18px;
       padding: 20px 40px;

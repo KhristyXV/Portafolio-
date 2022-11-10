@@ -132,7 +132,7 @@ export const InterrogationModalLeft = () => {
                     <p className="link">
                       Mejoramos el avión, ¡ Vamos al segundo destino !      
                       <a
-                        href="https://c6-02-m-mern-ten.vercel.app/"
+                        href="https://app-clima-2-0-1.vercel.app/"
                         target="_blank"
                       >
                         <SlPlane className="plane" />
