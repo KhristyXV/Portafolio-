@@ -5,6 +5,7 @@ import instagram from "../../assets/images/instagram.png";
 import linkedin from "../../assets/images/linkedin.png";
 import github from "../../assets/images/github.png";
 import curriculum from "../../assets/downloads/curriculumSchroh.pdf";
+import { Link } from "react-scroll";
 
 export const Home = () => {
   return (
@@ -26,36 +27,49 @@ export const Home = () => {
           ¡Bienvenido a mi Portafolio web!{" "}
         </div>
         <div className="buttonsContainer">
-          <></>
-          <button className="buttonSeeProyects">Ver proyectos</button>
-          <a href={curriculum} download="CV Santiago Schroh">
-            <button className="buttonDownloadCV">
-              <span className="center">
-                <img src={download} alt="downloadImage" />
-                Descargar CV
-              </span>
-            </button>
-          </a>
+          <div className="subButtonsContainer">
+            <div>
+              <Link
+                to={"proyects"}
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={300}
+              >
+                <button className="buttonSeeProyects">Ver proyectos</button>
+              </Link>
+            </div>
+            <div>
+              <a href={curriculum} download="CV Santiago Schroh">
+                <button className="buttonDownloadCV">
+                  <span className="center">
+                    <img src={download} alt="downloadImage" />
+                    Descargar CV
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className="websitesContainer">
         <a
           href="https://github.com/KhristyXV?tab=repositories"
-          className="socialImages"
+          className="socialImagesGit"
           target="_blank"
         >
           <img src={github} alt="imageGithub" />
         </a>
         <a
           href="https://www.instagram.com/schrohsanti/"
-          className="socialImages"
+          className="socialImagesInstagram"
           target="_blank"
         >
           <img src={instagram} alt="imageInstagram" />
         </a>
         <a
           href="https://www.linkedin.com/in/santiago-schroh-350099221/"
-          className="socialImages"
+          className="socialImagesLinkedin"
           target="_blank"
         >
           <img src={linkedin} alt="imageLinkedin" className="linkedinImage" />
@@ -105,6 +119,12 @@ const HomeContainer = styled.div`
     width: 62%;
     gap: 10px;
   }
+  .subButtonsContainer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
   .buttonSeeProyects {
     font-family: "DM Sans";
     font-style: normal;
@@ -116,8 +136,11 @@ const HomeContainer = styled.div`
     border-radius: 5px;
     border-color: transparent;
     cursor: pointer;
+    width: 100%;
+    height: 55px;
   }
   .buttonDownloadCV {
+    width: 100%;
     display: flex;
     align-items: center;
     font-family: "DM Sans";
@@ -213,9 +236,18 @@ const HomeContainer = styled.div`
       justify-content: center;
       gap: 30px;
     }
+    .subButtonsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 30px;
+    }
     .buttonSeeProyects {
       font-size: 18px;
       padding: 20px 40px;
+      display: flex;
+      height: 63px;
     }
     .buttonDownloadCV {
       font-size: 18px;
@@ -227,12 +259,29 @@ const HomeContainer = styled.div`
       justify-content: space-around;
       margin-bottom: 100px;
     }
-    .socialImages {
+    .socialImagesLinkedin {
       cursor: pointer;
       transition: all 800ms;
     }
-    .socialImages:hover {
+    .socialImagesLinkedin:hover {
       transform: scale(1.4);
+      filter: drop-shadow(20px 12px 10px #4444dd);
+    }
+    .socialImagesInstagram {
+      cursor: pointer;
+      transition: all 800ms;
+    }
+    .socialImagesInstagram:hover {
+      transform: scale(1.4);
+      filter: drop-shadow(0px 15px 15px #bf467c);
+    }
+    .socialImagesGit {
+      cursor: pointer;
+      transition: all 800ms;
+    }
+    .socialImagesGit:hover {
+      transform: scale(1.4);
+      filter: drop-shadow(-20px 12px 10px #b8e2f296);
     }
   }
 `;

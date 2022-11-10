@@ -20,7 +20,7 @@ export const NavBar = () => {
             spy={true}
             smooth={true}
             offset={-200}
-            duration={300}
+            duration={100}
             className="animatedLine"
           >
             <a>Inicio</a>
@@ -30,7 +30,7 @@ export const NavBar = () => {
             spy={true}
             smooth={true}
             offset={-200}
-            duration={300}
+            duration={100}
             className="animatedLine"
           >
             <a>Acerca de mi</a>
@@ -40,7 +40,7 @@ export const NavBar = () => {
             spy={true}
             smooth={true}
             offset={-150}
-            duration={300}
+            duration={100}
             className="animatedLine"
           >
             <a>Proyectos</a>
@@ -50,7 +50,7 @@ export const NavBar = () => {
             spy={true}
             smooth={true}
             offset={-110}
-            duration={300}
+            duration={100}
             className="animatedLine"
           >
             <a>Contactame</a>

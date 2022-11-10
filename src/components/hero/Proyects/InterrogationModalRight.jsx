@@ -236,17 +236,21 @@ const WrapperLeft = styled.div`
     font-weight: 300;
     text-align: left;
     line-height: 22px;
+    font-size: 19px;
   }
   h1 {
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
-    line-height: 8px;
+    line-height: 30px;
     letter-spacing: 4px;
     text-decoration: underline 1px;
     text-decoration-color: #00ffe0;
     text-underline-offset: 6px;
+  }
+  .climaTitle {
+    line-height: 2px;
   }
   .link {
     font-size: 15.5px;
