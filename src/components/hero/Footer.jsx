@@ -16,8 +16,25 @@ export const Footer = () => {
             </div>
             <div className="menu">
               <h2>Inicio</h2>
-              <h3>Acerca de mi</h3>
-              <h3>Proyectos</h3>
+              <Link
+                to={"aboutMe"}
+                spy={true}
+                smooth={true}
+                offset={-400}
+                duration={100}
+              >
+                <h3>Acerca de mi</h3>
+              </Link>
+
+              <Link
+                to={"proyects"}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={100}
+              >
+                <h3>Proyectos</h3>
+              </Link>
             </div>
             <div className="contact">
               <h2>Contactame</h2>
@@ -25,7 +42,7 @@ export const Footer = () => {
                 to={"contactme"}
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-85}
                 duration={300}
               >
                 <h3>Correo</h3>
