@@ -20,9 +20,7 @@ export const Hamburger = () => {
             offset={-200}
             duration={300}
           >
-            <a>
-              <li>Inicio</li>
-            </a>
+            <li>Inicio</li>
           </Link>
           <Link
             to={"aboutMe"}
@@ -31,9 +29,7 @@ export const Hamburger = () => {
             offset={-430}
             duration={300}
           >
-            <a>
-              <li>Acerca de mi</li>
-            </a>
+            <li>Acerca de mi</li>
           </Link>
           <Link
             to={"proyects"}
@@ -42,9 +38,7 @@ export const Hamburger = () => {
             offset={-60}
             duration={300}
           >
-            <a>
-              <li>Proyectos</li>
-            </a>
+            <li>Proyectos</li>
           </Link>
           <Link
             to={"contactme"}
@@ -53,9 +47,7 @@ export const Hamburger = () => {
             offset={-70}
             duration={300}
           >
-            <a href="#">
-              <li>Contactame</li>
-            </a>
+            <li>Contactame</li>
           </Link>
         </ul>
       </div>

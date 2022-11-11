@@ -18,7 +18,10 @@ export const Proyects = () => {
           <h1>Proyectos</h1>
           <button className="buttonDesktop">
             <span className="center">
-              <a href="https://github.com/KhristyXV?tab=repositories">
+              <a
+                href="https://github.com/KhristyXV?tab=repositories"
+                target="_blank"
+              >
                 Ver más en GitHub
               </a>
               <img
@@ -80,7 +83,10 @@ export const Proyects = () => {
       </div>
       <button className="buttonMobile">
         <span className="center">
-          <a href="https://github.com/KhristyXV?tab=repositories">
+          <a
+            href="https://github.com/KhristyXV?tab=repositories"
+            target="_blank"
+          >
             Ver más en GitHub
           </a>
           <img src={blackArrow} alt="arrowBlack" className="arrowBlacksin" />

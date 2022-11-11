@@ -248,7 +248,7 @@ const Wrapper = styled.div`
     color: white;
 
     width: 82%;
-    height: 10Spx;
+    height: 99px;
     background-color: #1c1e22;
     border: 1px solid #a0a0a1;
     border-radius: 8px;
@@ -272,7 +272,13 @@ const Wrapper = styled.div`
   .title {
     width: 90%;
   }
-
+  .swal-overlay {
+    background-color: #1c1e22;
+  }
+  .swal-modal {
+    background-color: #1c1e22;
+    color: white;
+  }
   .formContainer {
     background: #26292d;
     border-radius: 8px;

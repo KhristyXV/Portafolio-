@@ -23,7 +23,7 @@ export const NavBar = () => {
             duration={100}
             className="animatedLine"
           >
-            <a>Inicio</a>
+            <>Inicio</>
           </Link>
           <Link
             to={"aboutMe"}
@@ -33,7 +33,7 @@ export const NavBar = () => {
             duration={100}
             className="animatedLine"
           >
-            <a>Acerca de mi</a>
+            <>Acerca de mi</>
           </Link>
           <Link
             to={"proyects"}
@@ -43,7 +43,7 @@ export const NavBar = () => {
             duration={100}
             className="animatedLine"
           >
-            <a>Proyectos</a>
+            <>Proyectos</>
           </Link>
           <Link
             to={"contactme"}
@@ -53,7 +53,7 @@ export const NavBar = () => {
             duration={100}
             className="animatedLine"
           >
-            <a>Contactame</a>
+            <>Contactame</>
           </Link>
         </div>
       </div>
