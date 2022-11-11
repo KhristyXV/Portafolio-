@@ -31,6 +31,9 @@ export const Form = (props) => {
       .then(
         (result) => {
           seeAlert();
+          resetNameInput();
+          resetEmailInput();
+          resetTextArea();
         },
         (error) => {
           alert("no ha sido enviado");
@@ -322,6 +325,15 @@ const Wrapper = styled.div`
     border-color: 1px solid #ff8800;
     background-color: #fbe8d2;
   }
+  .invalid textarea {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+    color: black;
+  }
+  .invalid textarea::placeholder {
+    color: #000000be;
+  }
+
   button:disabled,
   button:disabled:hover,
   button:disabled:active {

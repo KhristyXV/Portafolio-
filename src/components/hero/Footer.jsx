@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import instagramSocial from "../../assets/images/instagramSocial.png";
 import linkedinSocial from "../../assets/images/linkedinSocial.png";
@@ -20,7 +21,16 @@ export const Footer = () => {
             </div>
             <div className="contact">
               <h2>Contactame</h2>
-              <h3>Correo</h3>
+              <Link
+                to={"contactme"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={300}
+              >
+                <h3>Correo</h3>
+              </Link>
+
               <a
                 href="https://www.linkedin.com/in/santiago-schroh-350099221/"
                 target="_blank"
@@ -86,10 +96,6 @@ const Wrapper = styled.div`
     font-weight: 500;
     line-height: 36px;
     letter-spacing: 0.15px;
-    transition: 200ms ease-in-out;
-  }
-  h2:hover {
-    transform: scale(1.1);
   }
   h3 {
     font-family: "DM Sans";
@@ -99,6 +105,7 @@ const Wrapper = styled.div`
     line-height: 34px;
     letter-spacing: 0.25px;
     transition: 200ms ease-in-out;
+    cursor: pointer;
   }
   h3:hover {
     transform: scale(1.1);
@@ -124,7 +131,6 @@ const Wrapper = styled.div`
   .containerOne {
     border-top: 0.1px solid #3f3a3a76;
     border-bottom: 0.1px solid #3f3a3a76;
-    cursor: pointer;
   }
   .containerTwo {
     display: flex;
@@ -162,11 +168,8 @@ const Wrapper = styled.div`
       font-weight: 500;
       line-height: 36px;
       letter-spacing: 0.15px;
-      transition: 200ms ease-in-out;
     }
-    h2:hover {
-      transform: scale(1.1);
-    }
+
     h3 {
       font-family: "DM Sans";
       font-style: normal;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Yo from "../../assets/images/yo.png";
 import YoBiggest from "../../assets/images/yoBiggest.png";
-import { Modals } from "../Modal.jsx/Modals";
+import arrow from "../../assets/images/arrow.png";
 
 export const About = () => {
   return (
@@ -12,25 +12,35 @@ export const About = () => {
           <img src={Yo} alt="imgMobileYo" />
         </div>
         <div className="imageContainer">
-          <img src={YoBiggest} alt="imageSantiago" />
+          <img src={YoBiggest} alt="imageSantiago" className="imgYoBiggest" />
         </div>
         <div className="textContainer" id="aboutMe">
           <h1> Acerca de mi</h1>
           <h3>
-            Hola! Mi nombre es Santiago y tengo gran afinidad hacía el trabajo
-            colaborativo, me gusta crear diseños que inspiren e involucren a las
-            personas. Como diseñador UI, considero que un buen producto no solo
-            brinda una solución sino que permite crear una experiencia emocional
-            en las personas que lo usan.
+            ¡ Hola !, Mi nombre es Santiago y tengo gran afinidad hacía el
+            trabajo grupal, el diseño, el desarrollo y el aprendizaje. Tengo 19
+            años y llevo más de un año dentro del mundo del desarrollo web, eh
+            realizado varios cursos de programación y mi preparación más intensa
+            la tuve en el Bootcamp "Hola Soy Henry". Posteriormente al Bootcamp
+            sentí que era hora de poner mis conocimientos en práctica, allí fue
+            cuando me uní a "No Country" y realicé diversos proyectos grupales.
           </h3>
           <h3>
-            En mi proceso creativo utilizo herramientas como Figma, Adobe XD,
-            Photoshop e Illustrator que me ayudan mucho en el flujo de trabajo
-            para la producción de interfaces de usuario.
+            Me considero Front-End Developer, pero cuento con conocimientos de
+            Back-End. La decisión de especializarme en el Front-End se basó en
+            mi personalidad, gustos y el amor por un buen diseño, además de
+            crear la mejor experiencia UX/UI.
           </h3>
-
           <div className="buttonContainer">
-            <Modals />
+            <a
+              href="https://www.linkedin.com/in/santiago-schroh-350099221/"
+              target="_blank"
+            >
+              <button className="effectButton">
+                Mas acerca de mi
+                <img src={arrow} className="arrow" />
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -44,7 +54,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-
+  a {
+    color: #fff;
+    content: "";
+  }
   .subContainer {
     display: flex;
     justify-content: center;
@@ -53,11 +66,12 @@ const Wrapper = styled.div`
     background-color: #141516;
     width: 98%;
     border-radius: 10px;
-    height: 1000px;
+    height: 1200px;
   }
   .imageContainer {
     display: none;
   }
+
   .textContainer {
     width: 90%;
     align-items: center;
@@ -81,7 +95,6 @@ const Wrapper = styled.div`
   .buttonContainer {
     display: block;
     justify-content: left;
-    margin-bottom: 12px;
   }
 
   button {
@@ -103,13 +116,13 @@ const Wrapper = styled.div`
     font-size: 16px;
     line-height: 16px;
   }
-  .hola {
+  .effectButton {
     color: rgba(0, 0, 0, 0) !important;
     transition: all 0.3s ease;
     text-shadow: 0 0 0 #fff, -200px 0 0 #00eee0;
     overflow: hidden;
   }
-  .hola:hover {
+  .effectButton:hover {
     text-shadow: 200px 0 0 #fff, 0 0 0 #00eee0;
     overflow: hidden;
   }
@@ -119,8 +132,12 @@ const Wrapper = styled.div`
   .YoBiggest {
     display: none;
   }
+  .imageMobileContainer {
+    filter: drop-shadow(0px 5px 7px #00eee0);
+  }
   @media screen and (min-width: 1024px) {
     margin-top: 60px;
+
     .subContainer {
       flex-direction: row;
       justify-content: space-around;
@@ -135,9 +152,15 @@ const Wrapper = styled.div`
     }
     .imageContainer {
       display: block;
-      margin-left: 15px;
+      margin-left: 30px;
       margin-right: 40px;
       margin-top: 20px;
+      filter: drop-shadow(12px 5px 7px #00eee0);
+      transition: 600ms ease-in-out;
+    }
+    .imageContainer:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(12px 5px 7px #ffffff);
     }
     .textContainer {
       display: flex;
@@ -152,7 +175,7 @@ const Wrapper = styled.div`
       font-style: normal;
       font-weight: 400;
       font-size: 56px;
-      line-height: 32px;
+      line-height: 24px;
       margin-bottom: 10px;
     }
     .textContainer h3 {
@@ -160,11 +183,17 @@ const Wrapper = styled.div`
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
-      line-height: 40px;
+      line-height: 36px;
       width: 90%;
 
       /* or 175% */
       letter-spacing: 0.44px;
+    }
+    .arrow {
+      margin-left: 8px;
+    }
+    .buttonContainer {
+      margin-bottom: 20px;
     }
   }
 `;

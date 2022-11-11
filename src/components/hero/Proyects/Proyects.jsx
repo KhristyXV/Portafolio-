@@ -36,7 +36,6 @@ export const Proyects = () => {
             <video
               className="resolutionImage"
               id="player"
-              playsinline
               controls
               data-poster="/path/to/poster.jpg"
             >
@@ -56,7 +55,6 @@ export const Proyects = () => {
             <video
               className="resolutionImage"
               id="player"
-              playsinline
               controls
               data-poster="/path/to/poster.jpg"
             >
@@ -69,7 +67,6 @@ export const Proyects = () => {
             <video
               className="resolutionImage"
               id="player"
-              playsinline
               controls
               data-poster="/path/to/poster.jpg"
             >
@@ -125,9 +122,6 @@ const Wrapper = styled.div`
     font-size: 16px;
     line-height: 16px;
   }
-  video {
-    cursor: pointer;
-  }
 
   .buttonDesktop {
     display: none;
@@ -136,7 +130,6 @@ const Wrapper = styled.div`
     width: 279px;
     height: 160px;
     border: 1px solid #00ffe0;
-    background: url();
     box-shadow: -6px -6px 4px 2px rgba(0, 255, 224, 0.6);
   }
   .containerInterrogationOne {
@@ -145,9 +138,7 @@ const Wrapper = styled.div`
   .containerInterrogationTwo {
     display: none;
   }
-  #fondo {
-    background: url("../../assets/images/digitize.png");
-  }
+
   .boxTwo {
     width: 279px;
     height: 160px;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Modal = ({ children, isOpen, closeModal }) => {
   const handleModalContainerClick = (e) => e.stopPropagation();
+
   return (
     <Wrapper>
       <div className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
@@ -43,5 +44,10 @@ const Wrapper = styled.div`
     height: 33px;
     border-radius: 11px;
     color: #020202;
+    transition: 600ms;
+  }
+  .modal-close:hover {
+    color: white;
+    background-color: red;
   }
 `;
