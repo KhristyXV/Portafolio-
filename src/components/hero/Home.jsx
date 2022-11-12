@@ -125,7 +125,7 @@ const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    gap: 20px;
+    gap: 30px;
   }
   .buttonSeeProyects {
     font-family: "DM Sans";
