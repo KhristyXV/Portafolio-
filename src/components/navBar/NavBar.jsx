@@ -110,6 +110,10 @@ const Wrapper = styled.div`
     border-bottom: 1px solid;
     border-color: #00eede;
 
+    a {
+      color: white;
+      text-decoration: none;
+    }
     .hamburger {
       display: none;
     }
@@ -122,7 +126,6 @@ const Wrapper = styled.div`
       font-weight: 600;
       font-size: 30px;
       width: 65%;
-      cursor: cell;
     }
     .optionsContainer {
       cursor: pointer;
