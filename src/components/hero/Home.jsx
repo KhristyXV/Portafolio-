@@ -208,8 +208,8 @@ const HomeContainer = styled.div`
       display: block;
       white-space: nowrap;
       border-right: 1px solid;
-      width: 15px;
-      animation: typing 3s steps(18), blink 0.5s infinite step-end alternate;
+      width: 20ch;
+      animation: typing 2400ms steps(19), blink 0.5s infinite step-end alternate;
       overflow: hidden;
     }
     .linkedinImage {
