@@ -89,7 +89,7 @@ const Wrapper = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 24px;
     letter-spacing: 0.44px;
   }
   .buttonContainer {
@@ -175,7 +175,7 @@ const Wrapper = styled.div`
       font-style: normal;
       font-weight: 400;
       font-size: 56px;
-      line-height: 24px;
+      line-height: 20px;
       margin-bottom: 10px;
     }
     .textContainer h3 {
@@ -183,7 +183,7 @@ const Wrapper = styled.div`
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
-      line-height: 36px;
+      line-height: 30px;
       width: 90%;
 
       /* or 175% */

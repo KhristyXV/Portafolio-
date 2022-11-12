@@ -148,14 +148,14 @@ const Nav = styled.nav`
     flex-direction: column;
     width: 100%;
     position: absolute;
-    margin: -100px 0 0 -320px;
+    margin: -100px 0 0 -100%;
     padding: 50px;
     padding-top: 125px;
     background: #0f0f0fef;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
-    height: 197px;
+    height: 166px;
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
 
@@ -163,7 +163,7 @@ const Nav = styled.nav`
   }
 
   #menu li {
-    padding: 18px 12px;
+    padding: 18px 12px 10px 3.5%;
     font-size: 22px;
     border: 1px solid #00eee0;
     border-right: none;

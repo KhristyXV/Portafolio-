@@ -191,6 +191,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 100px;
 
   h1 {
     font-family: "DM Sans";
