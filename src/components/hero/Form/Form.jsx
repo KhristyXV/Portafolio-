@@ -176,7 +176,7 @@ export const Form = (props) => {
               </div>
               <div className="buttonContainer">
                 <button disabled={!formIsValid} className="formButton">
-                  Enviar
+                  <h3>Enviar</h3>
                 </button>
               </div>
             </div>
@@ -202,6 +202,9 @@ const Wrapper = styled.div`
 
     /* identical to box height, or 118% */
     letter-spacing: 0.25px;
+  }
+  h3 {
+    font-size: 16px;
   }
   h4 {
     font-family: "DM Sans";
@@ -291,14 +294,14 @@ const Wrapper = styled.div`
   .formButton {
     display: flex;
     align-items: center;
-    padding: 16px 8px;
-    gap: 10px;
+    align-items: center;
     justify-content: center;
     width: 85%;
     height: 43px;
     background: #00eee0;
     border-radius: 8px;
     border-color: transparent;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-family: "DM Sans";
     font-style: normal;

@@ -94,6 +94,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 60px;
   a {
     color: #ffffff;
   }

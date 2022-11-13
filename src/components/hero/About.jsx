@@ -64,9 +64,9 @@ const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: #141516;
-    width: 98%;
+    width: 94%;
     border-radius: 10px;
-    height: 1200px;
+    height: 1215px;
   }
   .imageContainer {
     display: none;
@@ -134,6 +134,9 @@ const Wrapper = styled.div`
   }
   .imageMobileContainer {
     filter: drop-shadow(0px 5px 7px #00eee0);
+  }
+  .arrow {
+    margin-left: 8px;
   }
   @media screen and (min-width: 1024px) {
     margin-top: 60px;

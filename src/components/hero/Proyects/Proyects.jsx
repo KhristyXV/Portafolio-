@@ -172,10 +172,12 @@ const Wrapper = styled.div`
   .videoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 550px;
+    justify-content: space-between;
+    height: 600px;
   }
-
+  .buttonMobile {
+    margin-top: 80px;
+  }
   @media screen and (min-width: 1024px) {
     margin-top: 210px;
     .buttonMobile {

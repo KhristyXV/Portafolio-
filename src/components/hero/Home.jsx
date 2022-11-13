@@ -46,7 +46,7 @@ export const Home = () => {
                 <button className="buttonDownloadCV">
                   <span className="center">
                     <img src={download} alt="downloadImage" />
-                    Descargar CV
+                    <span className="downloadCvText">Descargar CV</span>
                   </span>
                 </button>
               </a>
@@ -88,7 +88,7 @@ const HomeContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 473px;
-  margin-top: 20px;
+  margin-top: 70px;
   .nameContainer {
     display: flex;
     flex-direction: column;
@@ -124,31 +124,30 @@ const HomeContainer = styled.div`
   .subButtonsContainer {
     display: flex;
     flex-direction: column;
-
-    gap: 30px;
   }
   .buttonSeeProyects {
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 16px;
-    padding: 16px 20px;
+    border-color: transparent;
     background: #00eee0;
     border-radius: 5px;
-    border-color: #00eee0;
     cursor: pointer;
     width: 100%;
-    height: 55px;
+    height: 48px;
+    margin-bottom: 20px;
   }
   .buttonDownloadCV {
     width: 100%;
+    height: 48px;
     display: flex;
     align-items: center;
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 16px;
     padding: 16px 20px;
     border: 1px solid #ffffff;
@@ -161,7 +160,9 @@ const HomeContainer = styled.div`
     transition: all 0.3s ease;
     text-shadow: 0 0 0 #fff, 0 45px 0 #000;
   }
-
+  .downloadCvText {
+    margin-left: 7px;
+  }
   .buttonDownloadCV:hover {
     text-shadow: 0 -45px 0 #fff, 0 0 0 #00eee0;
   }
@@ -246,7 +247,7 @@ const HomeContainer = styled.div`
       gap: 30px;
     }
     .buttonSeeProyects {
-      font-size: 18px;
+      font-size: 19px;
       padding: 20px 40px;
       display: flex;
       height: 63px;
@@ -287,7 +288,7 @@ const HomeContainer = styled.div`
       font-family: "DM Sans";
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 19px;
       content: "Ver Proyectos";
       display: flex;
       justify-content: center;
@@ -310,8 +311,13 @@ const HomeContainer = styled.div`
     }
 
     .buttonDownloadCV {
-      font-size: 18px;
-      padding: 20px 40px;
+      font-size: 19px;
+      width: 218.567px;
+      height: 63px;
+      margin-bottom: 18px;
+    }
+    .downloadCvText {
+      margin-left: 14px;
     }
     .websitesContainer {
       display: flex;
