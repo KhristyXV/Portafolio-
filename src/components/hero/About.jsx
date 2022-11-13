@@ -66,7 +66,7 @@ const Wrapper = styled.div`
     background-color: #141516;
     width: 94%;
     border-radius: 10px;
-    height: 1215px;
+    height: 1125px;
   }
   .imageContainer {
     display: none;
