@@ -205,6 +205,7 @@ const Wrapper = styled.div`
   }
   h3 {
     font-size: 16px;
+    text-align: center;
   }
   h4 {
     font-family: "DM Sans";
@@ -395,8 +396,7 @@ const Wrapper = styled.div`
     .formButton {
       width: 100%;
       height: 50px;
-      display: flex;
-      align-items: center;
+      text-align: center;
     }
     .positionContainer {
       display: flex;
