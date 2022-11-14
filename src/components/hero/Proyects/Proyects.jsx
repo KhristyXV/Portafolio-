@@ -19,7 +19,7 @@ export const Proyects = () => {
           <button className="buttonDesktop">
             <span className="center">
               <a
-                href="https://github.com/KhristyXV?tab=repositories"
+                href="https://github.com/SchrohSantiago?tab=repositories"
                 target="_blank"
               >
                 Ver más en GitHub
