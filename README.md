@@ -4,15 +4,11 @@
 
 ---
 
-\\
-
 ## Diseño Mobile 📱 y Desktop 🖥️
 
 ### El portafolio cuenta con diseño exclusivo para celular y otro diseño para visualización en PC.
 
 ---
-
-\\
 
 ## ¿ Queres saber como visualizar el diseño para MOBILE 📱 desde tu computadora ?:
 
@@ -21,8 +17,6 @@
 ### **Paso 2):** Hace click en "Inspeccionar".
 
 ### **Paso 3):** En la barra de navegación al lado izquierdo de "Elementos" clickea la imagen del celular.
-
-\\
 
 ![Imagen no disponible](/src/assets/images/ImagesToReadMe/pasos.gif)
 
