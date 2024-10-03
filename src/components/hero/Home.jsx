@@ -14,13 +14,13 @@ export const Home = () => {
         <span className="soy">Soy</span> {""}
         <div className="nameMobile">
           {" "}
-          <span className="name">Santiago Schroh. Front-End</span> Dev
+          <span className="name">Santiago Schroh. Back-End</span> Dev
         </div>
         <div className="nameDesktop">
           Soy <span className="colorNameDesktop">Santiago Schroh.</span>
         </div>
         <div className="nameDesktop2">
-          <span className="colorNameDesktop">Front-End</span> Developer
+          <span className="colorNameDesktop">Back-End</span> Developer
         </div>
         <div className="welcomeContainer">
           {" "}
@@ -56,7 +56,7 @@ export const Home = () => {
       </div>
       <div className="websitesContainer">
         <a
-          href="https://github.com/KhristyXV?tab=repositories"
+          href="https://github.com/SchrohSantiago"
           className="socialImagesGit"
           target="_blank"
         >

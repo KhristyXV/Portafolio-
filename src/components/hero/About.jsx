@@ -17,19 +17,9 @@ export const About = () => {
         <div className="textContainer" id="aboutMe">
           <h1> Acerca de mi</h1>
           <h3>
-            ¡ Hola !, Mi nombre es Santiago y tengo gran afinidad hacía el
-            trabajo grupal, el diseño, el desarrollo y el aprendizaje. Tengo 19
-            años y llevo más de un año dentro del mundo del desarrollo web, eh
-            realizado varios cursos de programación y mi preparación más intensa
-            la tuve en el Bootcamp "Hola Soy Henry". Posteriormente al Bootcamp
-            sentí que era hora de poner mis conocimientos en práctica, allí fue
-            cuando me uní a "No Country" y realicé diversos proyectos grupales.
-          </h3>
-          <h3>
-            Me considero Front-End Developer, pero cuento con conocimientos de
-            Back-End. La decisión de especializarme en el Front-End se basó en
-            mi personalidad, gustos y el amor por un buen diseño, además de
-            crear la mejor experiencia UX/UI.
+          Soy Santiago, un desarrollador Full Stack con experiencia en Back-End y Front-End. Tengo más de un año de experiencia trabajando con Java (Java 8+), Spring Boot, y API REST en el desarrollo Back-End, así como con JavaScript, React y Node.js para el desarrollo Front-End. Además, cuento con conocimientos en bases de datos relacionales como MySQL.
+          He trabajado en entornos ágiles utilizando la metodología SCRUM, desarrollando habilidades clave como el trabajo en equipo, la adaptabilidad, y la gestión del tiempo. Mi formación incluye la Tecnicatura Universitaria en Programación en la UTN, complementada con certificaciones en Java, Spring, React, y en proceso Microservicios.
+          Mi experiencia en No Country me permitió trabajar en proyectos grupales donde desarrollé tanto la parte Back-End como Front-End, aplicando principios de diseño como SOLID y usando tecnologías como Hibernate, JWT para la seguridad de API, y Git para el control de versiones. Actualmente, me sigo especializando en Java y el desarrollo Back-End, siempre enfocado en mejorar y adquirir nuevas habilidades.
           </h3>
           <div className="buttonContainer">
             <a

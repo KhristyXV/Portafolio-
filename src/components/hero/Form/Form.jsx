@@ -20,13 +20,13 @@ export const Form = (props) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     emailjs
       .sendForm(
-        "service_ipm0cpg",
-        "template_2rmo8cq",
+        'service_nnz8ncg', // Service ID desde .env
+        'template_xnddgfo', // Template ID desde .env
         formu.current,
-        "u2KSdkRc208iNve7t"
+        '3FVWv8W5eBU4cTsWM' // User ID desde .env
       )
       .then(
         (result) => {

@@ -8,7 +8,7 @@ import {
   InterrogationModalRight,
   InterrogationModalRightTwo,
   InterrogationModalLeft,
-} from "./InterrogationModalRight";
+} from "./InterrogationModals";
 
 export const Proyects = () => {
   return (

@@ -32,16 +32,6 @@ export const InterrogationModalRight = () => {
                       las tarjetas, Digitize te ofrece diferentes planes según
                       tu necesidad o dimensión del proyecto.
                     </p>
-                    <p className="link">
-                      ¿ Queres probar el proyecto ?, Pulsa el avión y, ¡ Vamos
-                      de viaje !      
-                      <a
-                        href="https://c6-02-m-mern-ten.vercel.app/"
-                        target="_blank"
-                      >
-                        <FaRegPaperPlane className="plane" />
-                      </a>
-                    </p>
                   </h3>
                 </div>
               </div>
@@ -69,28 +59,14 @@ export const InterrogationModalRightTwo = () => {
                 <div className="text">
                   <h3>
                     Eco-Sport al igual que Digitize lo realice en "No Country".
-                    Por el momento es mi proyecto favorito, se le dedico mucho
-                    tiempo y amor.{" "}
-                    <div className="containerHear">
-                      <GiChainedHeart className="hear" />
-                    </div>
+                    {" "}
                     <p>
                       Eco-Sport es un E-commerce de ropa deportiva el cual
                       cuenta con una gran variedad de funcionalidades, un diseño
                       tanto Mobile como Desktop, formularios, login/register,
-                      proceso de pago, filtros de búsqueda, seguridad TOKEN y
+                      proceso de pago, filtros de búsqueda, implementacion TOKEN y
                       panel de administrador. Fue realizado en un periodo de 5
                       semanas y entre 4 desarrolladores.
-                    </p>
-                    <p className="link">
-                      Para este proyecto vamos a precisar un ¡Cohete!, ¡ Vamos a
-                      la Luna !
-                      <a
-                        href="https://s4-06-m-java-react-wljq.vercel.app/"
-                        target="_blank"
-                      >
-                        <GiRocket className="plane" />
-                      </a>
                     </p>
                   </h3>
                 </div>
@@ -118,8 +94,7 @@ export const InterrogationModalLeft = () => {
               <div className="containerText">
                 <div className="text">
                   <h3 className="textoClima">
-                    App Clima 2.0 fue mi primer proyecto, creado mientras
-                    estudiaba en el bootcamp "Hola Soy Henry".{" "}
+                    App Clima 2.0 fue mi primer proyecto.{" "}
                     <p>
                       Verdaderamente, si bien es un proyecto muy simple a
                       comparación de los demás, fue aquel que más me costo
@@ -128,15 +103,6 @@ export const InterrogationModalLeft = () => {
                       unas funcionalidades básicas decidí que me esforzaría
                       mucho por el diseño. Allí fue cuando me di cuenta de la
                       importancia de brindar una buena experiencia al Usuario.
-                    </p>
-                    <p className="link">
-                      Mejoramos el avión, ¡ Vamos al segundo destino !      
-                      <a
-                        href="https://app-clima-2-0-1.vercel.app/"
-                        target="_blank"
-                      >
-                        <SlPlane className="plane" />
-                      </a>
                     </p>
                   </h3>
                 </div>
