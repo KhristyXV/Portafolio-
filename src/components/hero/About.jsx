@@ -56,7 +56,9 @@ const Wrapper = styled.div`
     background-color: #141516;
     width: 94%;
     border-radius: 10px;
-    height: 1125px;
+    height: auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
   .imageContainer {
     display: none;
@@ -124,6 +126,7 @@ const Wrapper = styled.div`
   }
   .imageMobileContainer {
     filter: drop-shadow(0px 5px 7px #00eee0);
+    
   }
   .arrow {
     margin-left: 8px;
@@ -175,7 +178,7 @@ const Wrapper = styled.div`
       font-family: "DM Sans";
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 30px;
       width: 90%;
 
